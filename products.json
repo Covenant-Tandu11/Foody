@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Double Beef Burger",
+        "price": "$20",
+        "image": "images/Double-Beef-Burger.png"
+    },
+
+    {
+        "id": 2,
+        "name": "Veggie Pizza",
+        "price": "$15",
+        "image": "images/Vege-pizza.png"
+    },
+
+    {
+        "id": 3,
+        "name": "Sushi Rolls",
+        "price": "$10",
+        "image": "images/Sushi-Rolls.png"
+    },
+
+    {
+        "id": 4,
+        "name": "Chicken Rolls",
+        "price": "$8",
+        "image": "images/chicken-rolls.png"
+    }
+]
