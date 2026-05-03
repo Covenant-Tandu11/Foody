@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
+
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -34,44 +34,39 @@
                 </li>
             </ul>
 
-            <div class="desktop-action flex gap-2">
-                <a href="#" class="cart-icon">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-value">0</span>
-                </a>
-                <a href="" class="btn">
-                    Sign in
-                    &nbsp;
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </a>
-                <a href="#" class="hamburger">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
-            </div>
+          <div class="desktop-action flex gap-2">
+    <a href="#" class="cart-icon" id="cartIcon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-value">0</span>
+    </a>
+
+    <a href="#" class="btn">
+        Sign in
+        &nbsp;
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
+
+    <button class="hamburger" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
 
             <!--MOBILE MENU-->
-            <ul class="mobile-menu">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Menu</a>
-                </li>
-                <li>
-                    <a href="#">Service</a>
-                </li>
-                <li>
-                    <a href="#">About Us</a>
-                </li>
-                <li>
-                    <a href="#">Contacts</a>
-                </li>
-                <a href="" class="btn">
-                    Sign in
-                    &nbsp;
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                </a>
-            </ul>
+ <ul class="mobile-menu" id="mobileMenu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#">Service</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#newsletter">Contacts</a></li>
+
+    <li>
+        <a href="#" class="btn">
+            Sign in
+            &nbsp;
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+    </li>
+</ul>
         </nav>
     </header>
 
@@ -168,17 +163,17 @@
                 <h3>The Most Popular</h3>
             </div>
 
-            <div class="menu-categories gap-2">
-                <button class="category active"><i class="fa-solid fa-utensils"></i></button>
-                <button class="category"><i class="fa-solid fa-burger"></i> Burgers</button>
-                <button class="category"><i class="fa-solid fa-pizza-slice"></i> Pizza</button>
-                <button class="category"><i class="fa-solid fa-fish"></i> Sushi</button>
-                <button class="category"><i class="fa-solid fa-hotdog"></i> Snacks</button>
-                <button class="category"><i class="fa-solid fa-leaf"></i> Salads</button>
-                <button class="category"><i class="fa-solid fa-martini-glass-citrus"></i> Drinks</button>
-                <button class="category"><i class="fa-solid fa-cake-candles"></i> Desserts</button>
+            <div class="menu-categories gap-2" id="categoryContainer">
+                <button class="category active" data-category="all"><i class="fa-solid fa-utensils"></i></button>
+                <button class="category" data-category="burger"><i class="fa-solid fa-burger"></i> Burgers</button>
+                <button class="category" data-category="pizza"><i class="fa-solid fa-pizza-slice"></i> Pizza</button>
+                <button class="category" data-category="sushi"><i class="fa-solid fa-fish"></i> Sushi</button>
+                <button class="category" data-category="snacks"><i class="fa-solid fa-hotdog"></i> Snacks</button>
+                <button class="category" data-category="salad"><i class="fa-solid fa-leaf"></i> Salads</button>
+                <button class="category" data-category="drinks"><i class="fa-solid fa-martini-glass-citrus"></i> Drinks</button>
+                <button class="category" data-category="dessert"><i class="fa-solid fa-cake-candles"></i> Desserts</button>
             </div>
-            <div class="card-list text-align gap-2">
+            <div class="card-list text-align gap-2" id="cardList">
                 <!--<div class="order-card">
                     <div class="card-image">
                         <img src="images/Double-Beef-Burger.png" alt="Vegan Burger Image">
@@ -306,18 +301,10 @@
                     <h4>Greek Salad</h4>
                     <h4 class="price">$5</h4>
                     <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div>
-                <div class="order-card">
-                    <div class="card-image">
-                        <img src="images/Avocado-chicken-salad.png" alt="Caesar Salad">
-                    </div>
-                    <h4>Avocado Chicken Salad</h4>
-                    <h4 class="price">$10</h4>
-                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
-                </div> -->
+                </div>-->
             </div>
             <!-- CART TAB -->
-                <div class="cart-tab">
+                <div class="cart-tab" id="cartTab">
                     <h3>Your Cart</h3>
                     <div class="cart-list">
                         <!-- <div class="item">
@@ -344,13 +331,10 @@
                         <h4 class="cart-total">$0.00</h4>
                     </div>
                     <div class="btn-container">
-                        <a href="#" class="btn close-btn">Close</a>
+                        <a href="#" class="btn close-btn" id="closeCart">Close</a>
                         <a href="#" class="btn">Checkout</a>
                     </div>
                 </div>
-            <div class="view-more">    
-                <a href="#" class="btn">View More <i class="fa-solid fa-chevron-down"></i></a>
-            </div>
     </section>
     <section>
         <div class="testimonial-container wrapper p-top gap-3">

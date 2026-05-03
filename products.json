@@ -1,29 +1,18 @@
 [
-    {
-        "id": 1,
-        "name": "Double Beef Burger",
-        "price": "$20",
-        "image": "images/Double-Beef-Burger.png"
-    },
-
-    {
-        "id": 2,
-        "name": "Veggie Pizza",
-        "price": "$15",
-        "image": "images/Vege-pizza.png"
-    },
-
-    {
-        "id": 3,
-        "name": "Sushi Rolls",
-        "price": "$10",
-        "image": "images/Sushi-Rolls.png"
-    },
-
-    {
-        "id": 4,
-        "name": "Chicken Rolls",
-        "price": "$8",
-        "image": "images/chicken-rolls.png"
-    }
+  { "id": 1, "name": "Double Beef Burger", "price": "$20", "image": "images/Double-Beef-Burger.png", "category":"burger" },
+  { "id": 2, "name": "Veggie Pizza", "price": "$15", "image": "images/Vege-pizza.png", "category":"pizza" },
+  { "id": 3, "name": "Sushi Rolls", "price": "$10", "image": "images/Sushi-Rolls.png", "category":"sushi" },
+  { "id": 4, "name": "Chicken Rolls", "price": "$8", "image": "images/chicken-rolls.png", "category":"snacks" },
+  { "id": 5, "name": "Sandwich", "price": "$6", "image": "images/Sandwich.png", "category":"snacks" },
+  { "id": 6, "name": "Hamburger", "price": "$5", "image": "images/Burger.png", "category":"burger" },
+  { "id": 7, "name": "Chicken Pizza", "price": "$20", "image": "images/Chiecken-Pizza.png", "category":"pizza" },
+  { "id": 8, "name": "Caesar Salad", "price": "$12", "image": "images/Caesar-Salad.png", "category":"salad" },
+  { "id": 9, "name": "Chicken Burger", "price": "$10", "image": "images/Chicken-Burger.png", "category":"burger" },
+  { "id": 10, "name": "Ice cream sundae", "price": "$10", "image": "images/icecreamsundae.png", "category":"dessert" },
+  { "id": 11, "name": "Iced Latte", "price": "$6", "image": "images/Coffee.png", "category":"drinks" },
+  { "id": 12, "name": "Lemonade", "price": "$5", "image": "images/lemonade.png", "category":"drinks" },
+  { "id": 13, "name": "Molten Lava Cake", "price": "$6", "image": "images/Molten-lava.png", "category":"dessert" },
+  { "id": 14, "name": "Cheesecake", "price": "$9", "image": "images/Cheesecake.png", "category":"dessert" },
+  { "id": 15, "name": "Milkshake", "price": "$7", "image": "images/Popcorn-milkshake.png", "category":"drinks" },
+  { "id": 16, "name": "Greek Salad", "price": "$5", "image": "images/Greek-Salad.png", "category":"salad" }
 ]
