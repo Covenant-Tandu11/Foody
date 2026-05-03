@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foody Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- HEADER PART -->
+    <header>
+        <nav class="navbar flex between wrapper">
+            <a href="#" class="logo">FOODY.</a>
+            <!--DESKTOP MENU-->
+            <ul class="navlist flex gap-3">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#menu">Menu</a>
+                </li>
+                <li>
+                    <a href="#">Service</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#newsletter">Contacts</a>
+                </li>
+            </ul>
+
+          <div class="desktop-action flex gap-2">
+    <a href="#" class="cart-icon" id="cartIcon">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-value">0</span>
+    </a>
+
+    <a href="#" class="btn">
+        Sign in
+        &nbsp;
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+    </a>
+
+    <button class="hamburger" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+</div>
+
+            <!--MOBILE MENU-->
+ <ul class="mobile-menu" id="mobileMenu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#">Service</a></li>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#newsletter">Contacts</a></li>
+
+    <li>
+        <a href="#" class="btn">
+            Sign in
+            &nbsp;
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </a>
+    </li>
+</ul>
+        </nav>
+    </header>
+
+    <!-- SECTIONS PART -->
+<main>
+    <section>
+        <div class="hero-section wrapper gap-4">
+            <div class="hero-content flex between">
+                <div class="left-content">
+                    <h1>
+                        Enjoy Your Delicious
+                        <span>Food</span>
+                    </h1>
+                    <p class="para">
+                        We will fill your tummy with delicious<br>
+                        food with fast delivery.
+                    </p>
+                    <div >
+                        <a href="#menu" class="btn" style="margin-bottom: 20px;">Order now</a>
+                        
+                        <div class="social-icons flex gap-2">
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fa-brands fa-google-plus-g"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-content">
+                    <div class="image-container">
+                        <img src="images/hero-image.jpg" alt="Delivery guy with pizza" class="person-image">
+
+                        <div class="floating-card phone-card">
+                            <div class="icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="info">
+                                <h4>Phone Number</h4>
+                                <p>+370 (6) 123-45-67</p>
+                            </div>
+                        </div>
+
+                        <div class="floating-card testimonial-card">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>Fast delivery and friendly staff. The food was hot and very tasty.</p>
+                            <div class="author">- Happy Customer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services wrapper p-top">
+        <div class="text-align">
+            <div class="section-header">
+                <h5>Our Services</h5>
+                <h3>How Does It Work?</h3>
+            </div>
+
+            <div class="services-content gap-3">
+                <article class="service-card">
+                    <img src="images/Order food-amico.svg" alt="Food Order">
+                    <h5>Easy to Order</h5>
+                    <p>You only need a few steps in ordering food</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/Take Away-pana.svg" alt="Scooter Delivery">
+                    <h5>Fastest Delivery</h5>
+                    <p>Delivery that is always on time and even faster</p>
+                </article>
+                <article class="service-card">
+                    <img src="images/fast food-pana.svg" alt="Fast food">
+                    <h5>Best Quality</h5>
+                    <p>Not only fast, for us quality is also number one</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper p-top text-align" id="menu">
+        <div class="section-header">
+                <h5>Our Menu</h5>
+                <h3>The Most Popular</h3>
+            </div>
+
+            <div class="menu-categories gap-2" id="categoryContainer">
+                <button class="category active" data-category="all"><i class="fa-solid fa-utensils"></i></button>
+                <button class="category" data-category="burger"><i class="fa-solid fa-burger"></i> Burgers</button>
+                <button class="category" data-category="pizza"><i class="fa-solid fa-pizza-slice"></i> Pizza</button>
+                <button class="category" data-category="sushi"><i class="fa-solid fa-fish"></i> Sushi</button>
+                <button class="category" data-category="snacks"><i class="fa-solid fa-hotdog"></i> Snacks</button>
+                <button class="category" data-category="salad"><i class="fa-solid fa-leaf"></i> Salads</button>
+                <button class="category" data-category="drinks"><i class="fa-solid fa-martini-glass-citrus"></i> Drinks</button>
+                <button class="category" data-category="dessert"><i class="fa-solid fa-cake-candles"></i> Desserts</button>
+            </div>
+            <div class="card-list text-align gap-2" id="cardList">
+                <!--<div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Double-Beef-Burger.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Double Beef Burger</h4>
+                    <h4 class="price">$20</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Vege-pizza.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Veggie Pizza</h4>
+                    <h4 class="price">$15</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Sushi-Rolls.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Sushi Rolls</h4>
+                    <h4 class="price">$10</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/chicken-rolls.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Chicken Rolls</h4>
+                    <h4 class="price">$8</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Sandwich.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Sandwich</h4>
+                    <h4 class="price">$6</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Burger.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Hamburger</h4>
+                    <h4 class="price">$5</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Chiecken-Pizza.png" alt="Vegan Burger Image">
+                    </div>
+                    <h4>Chicken Pizza</h4>
+                    <h4 class="price">$20</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Caesar-Salad.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Caesar Salad</h4>
+                    <h4 class="price">$12</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Chicken-Burger.png" alt="Chicken Burger">
+                    </div>
+                    <h4>Chicken Burger</h4>
+                    <h4 class="price">$10</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/icecreamsundae.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Ice cream sundae</h4>
+                    <h4 class="price">$10</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Coffee.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Iced Latte</h4>
+                    <h4 class="price">$6</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/lemonade.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Lemonade</h4>
+                    <h4 class="price">$5</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Molten-lava.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Molten Lava Cake</h4>
+                    <h4 class="price">$8</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Cheesecake.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Cheesecake</h4>
+                    <h4 class="price">$9</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Popcorn-milkshake.png" alt="Caesar Salad">
+                    </div>
+                    <h4>MilkShake</h4>
+                    <h4 class="price">$7</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="order-card">
+                    <div class="card-image">
+                        <img src="images/Greek-Salad.png" alt="Caesar Salad">
+                    </div>
+                    <h4>Greek Salad</h4>
+                    <h4 class="price">$5</h4>
+                    <a href="#" class="btn"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>-->
+            </div>
+            <!-- CART TAB -->
+                <div class="cart-tab" id="cartTab">
+                    <h3>Your Cart</h3>
+                    <div class="cart-list">
+                        <!-- <div class="item">
+                            <div class="cart-item-image">
+                                <img src="images/Burger.png" alt="">
+                            </div>
+                            <div>
+                                <h4>Hamburger</h4>
+                                <h4 class="item-total">$20</h4>
+                            </div>
+                            <div class="quantity-items">
+                                <a href="#" class="quantity">
+                                    <i class="fa-solid fa-minus"></i>
+                                </a>
+                                <h4 class="quantity-value">1</h4>
+                                <a href="#" class="quantity">
+                                    <i class="fa-solid fa-plus"></i>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="total-container">
+                        <h4>Total:</h4>
+                        <h4 class="cart-total">$0.00</h4>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn close-btn" id="closeCart">Close</a>
+                        <a href="#" class="btn">Checkout</a>
+                    </div>
+                </div>
+    </section>
+    <section>
+        <div class="testimonial-container wrapper p-top gap-3">
+            <div class="testimonial-left">
+                <img src="images/Delivery-guy-with-phone.jpg" alt="Delivery Guy with a phone">
+            </div>
+            <div class="testimonial-right">
+                <div class="section-header">
+                    <h5>Our reviews</h5>
+                    <h3>What They Say?</h3>
+                </div>
+                <div class="review-cards">
+                    <div class="review-card current">
+                        <div class="profile">
+                            <img src="images/potrait1.jpg" alt="jane doe" class="profile-image">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"The food was absolutely amazing! Fast delivery and so tasty. Highly recommend this place!."</p>
+                        <h4 class="reviewer-name">Guy Hawkins</h4>
+                    </div>
+                    <div class="review-card">
+                        <div class="profile">
+                            <img src="images/potrait2.jpg" alt="jane doe" class="profile-image">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"Delicious meals! The customer service was very friendly. Will order again for sure."</p>
+                        <h4 class="reviewer-name">Jane Doe</h4>
+                    </div>
+                    <div class="review-card">
+                        <div class="profile">
+                            <img src="images/potrait3.jpg" alt="jane doe" class="profile-image">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="review-text">"I love their salads and drinks! The quality is always top-notch and fresh."</p>
+                        <h4 class="reviewer-name">Mary Johnson</h4>
+                    </div>
+                </div>
+                <div class="testimonial-arrows">
+                    <button class="arrow prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="how-to-order wrapper p-top">
+        <div class="how-to-order-content flex between gap-3">
+            <div class="order-text">
+                <h5>Our Application</h5>
+                <h2>Simple Way To Order Your Food</h2>
+                <p class="para">
+                We will fill your tummy with delicious food with fast delivery. 
+                Just a few clicks and your favorite meal is on its way!
+                </p>
+                <a href="#menu" class="btn">Order Now</a>
+            </div>
+            <div class="order-image flex">
+                <div class="phone-mockup">
+                    <div class="mockup-header">
+                        <div class="menu-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="search-bar">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Search food...</span>
+                        </div>
+                    </div>
+                <div class="mockup-content">
+                    <div class="category-item active">
+                        <i class="fa-solid fa-burger"></i>
+                        <span>Burger</span>
+                    </div>
+                    <div class="food-item">
+                        <div class="food-img">
+                            <i class="fa-solid fa-burger"></i>
+                        </div>
+                        <div class="food-details">
+                            <h4>Double Beef Burger</h4>
+                            <p>Fast Food • American</p>
+                            <div class="food-meta">
+                                <span><i class="fa-solid fa-star"></i> 4.8</span>
+                                <span><i class="fa-regular fa-clock"></i> 30 min</span>
+                                <span><i class="fa-solid fa-truck"></i> Free</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food-item">
+                        <div class="food-img">
+                            <i class="fa-solid fa-pizza-slice"></i>
+                        </div>
+                        <div class="food-details">
+                            <h4>Chicken Pizza</h4>
+                            <p>Italian • Pizza</p>
+                            <div class="food-meta">
+                                <span><i class="fa-solid fa-star"></i> 4.6</span>
+                                <span><i class="fa-regular fa-clock"></i> 40 min</span>
+                                <span><i class="fa-solid fa-truck"></i> $2.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this section before the footer -->
+<section class="newsletter wrapper p-top" id="newsletter">
+    <div class="newsletter-content text-align">
+        <div class="section-header">
+            <h5>Our Newsletter</h5>
+            <h3>Subscribe & Get 20% Off</h3>
+        </div>
+        <p class="newsletter-description">
+            Subscribe to our newsletter and be the first to receive<br>
+            exclusive offers, new menu items, and special discounts!
+        </p>
+        
+        <form class="newsletter-form flex gap-2 justify-center">
+            <div class="input-wrapper">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your email address" required>
+            </div>
+            <button type="submit" class="btn subscribe-btn">
+                Subscribe
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </form>
+        
+        <p class="newsletter-note">
+            <i class="fa-solid fa-shield-halved"></i>
+            We respect your privacy. Unsubscribe at any time.
+        </p>
+    </div>
+</section>
+</main>
+<!-- FOOTER PART -->
+<footer class="footer">
+    <div class="footer-container wrapper">
+        <div class="footer-col">
+            <a class="logo">FOODY.</a>
+            <p class="footer-text">
+                We deliver delicious food quickly and fresh to your doorstep.
+            </p>
+            <div class="footer-social-icons flex gap-2">
+                <a href="#" class="footer-social-icon">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="#" class="footer-social-icon">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer-social-icon">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer-social-icon">
+                    <i class="fa-brands fa-google-plus-g"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Stay Connected</h3>
+            <p class="footer-text">Subscribe to get special offers.</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
