@@ -76,7 +76,6 @@ function filterProducts(category) {
     cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         if (category === 'all' || cardCategory === category) {
-            // Show the card
             card.style.display = 'flex';
             card.style.animation = 'fadeIn 0.5s ease forwards';
         } else {
@@ -84,4 +83,34 @@ function filterProducts(category) {
         }
     });
 };
+
+const cartIcon = document.getElementById('cartIcon');
+const cartTab = document.getElementById('cartTab');
+const closeBtn = document.getElementById('closeCart');
+
+if (cartIcon && cartTab) {
+    cartIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        cartTab.classList.add('cart-tab-active');
+        console.log('🛒 Cart opened!');
+    });
+
+    if(closeBtn){
+        closeBtn.addEventListener('click', () => {
+            cartTab.classList.remove('cart-tab-active');
+            console.log('❌ Cart closed!');
+        })
+    }
+
+     document.addEventListener('click', (event) => {
+        // Check if click is OUTSIDE cart AND cart is open
+        if (cartTab.classList.contains('cart-tab-active') && 
+            !cartTab.contains(event.target) && 
+            !cartIcon.contains(event.target)) {
+            
+            cartTab.classList.remove('cart-tab-active');
+            console.log('👆 Cart closed by clicking outside');
+        }
+    });
+}
 
