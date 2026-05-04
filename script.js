@@ -427,6 +427,124 @@ let slideInterval;
         startAutoSlide();  // Start auto-advance
         console.log('⭐ Testimonial slider initialized!');
     }
+   // ============================================
+// ✅ NEWSLETTER SUBSCRIBE (BUTTON CLICK VERSION)
+// ============================================
 
+const newsletterForm = document.querySelector('.newsletter-form');
+const footerSubscribeBox = document.querySelector('.subscribe-box');
+
+function showSubscribeSuccess(email) {
+    const toast = document.createElement('div');
+    toast.innerHTML = `
+        <div style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, var(--accent-color), #d4a017);
+            color: var(--pure-white);
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            z-index: 1000;
+            animation: slideInToast 0.3s ease, fadeOutToast 0.3s ease 2.7s forwards;
+            max-width: 350px;
+        ">
+            <i class="fa-solid fa-circle-check" style="font-size: 1.5rem;"></i>
+            <div>
+                <strong>🎉 Subscribed!</strong><br>
+                <small>Thanks, ${email}! Check your inbox for 20% off ✨</small>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+}
+
+function showError(container, message) {
+    const existingError = container.querySelector('.error-message');
+    if (existingError) existingError.remove();
     
+    const error = document.createElement('p');
+    error.className = 'error-message';
+    error.textContent = message;
+    error.style.cssText = `
+        color: #dc3545;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+        text-align: center;
+    `;
+    
+    container.appendChild(error);
+    setTimeout(() => error.remove(), 3000);
+}
+
+// Handle MAIN newsletter form (submit event)
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput?.value.trim();
+        
+        if (!email || !isValidEmail(email)) {
+            showError(newsletterForm, 'Please enter a valid email address');
+            return;
+        }
+        
+        showSubscribeSuccess(email);
+        emailInput.value = '';
+        newsletterForm.reset();
+    });
+}
+
+// Handle FOOTER subscribe box (CLICK event on button)
+if (footerSubscribeBox) {
+    const footerButton = footerSubscribeBox.querySelector('button');
+    const footerInput = footerSubscribeBox.querySelector('input[type="email"]');
+    
+    if (footerButton && footerInput) {
+        footerButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            const email = footerInput.value.trim();
+            
+            if (!email || !isValidEmail(email)) {
+                showError(footerSubscribeBox, 'Please enter a valid email address');
+                return;
+            }
+            
+            showSubscribeSuccess(email);
+            footerInput.value = '';
+        });
+    }
+}
+
+// Add CSS animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideInToast {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes fadeOutToast {
+        from { opacity: 1; transform: translateY(0); }
+        to { opacity: 0; transform: translateY(-20px); }
+    }
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        75% { transform: translateX(5px); }
+    }
+`;
+document.head.appendChild(style);
+
+console.log('📧 Newsletter handlers ready!');
 });
