@@ -427,9 +427,9 @@ let slideInterval;
         startAutoSlide();  // Start auto-advance
         console.log('⭐ Testimonial slider initialized!');
     }
-   // ============================================
-// ✅ NEWSLETTER SUBSCRIBE (BUTTON CLICK VERSION)
-// ============================================
+    // ============================================
+    // NEWSLETTER SUBSCRIBE 
+    // ============================================
 
 const newsletterForm = document.querySelector('.newsletter-form');
 const footerSubscribeBox = document.querySelector('.subscribe-box');
@@ -487,7 +487,7 @@ function showError(container, message) {
     setTimeout(() => error.remove(), 3000);
 }
 
-// Handle MAIN newsletter form (submit event)
+
 if (newsletterForm) {
     newsletterForm.addEventListener('submit', (event) => {
         event.preventDefault();
@@ -505,7 +505,7 @@ if (newsletterForm) {
     });
 }
 
-// Handle FOOTER subscribe box (CLICK event on button)
+
 if (footerSubscribeBox) {
     const footerButton = footerSubscribeBox.querySelector('button');
     const footerInput = footerSubscribeBox.querySelector('input[type="email"]');
